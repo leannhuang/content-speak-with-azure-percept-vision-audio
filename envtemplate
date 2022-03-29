@@ -1,0 +1,6 @@
+CONTAINER_REGISTRY_USERNAME_yourregistryname= <Your container registry Username>
+CONTAINER_REGISTRY_PASSWORD_yourregistryname= <Your container registry Password>
+CONNECTION_STRING = <Your Connection String>
+DEVICE_ID = <Your Device ID>
+CONTAINER_REGISTRY_USERNAME_speech=rgleannmaria
+CONTAINER_REGISTRY_PASSWORD_speech=lmj1HXAOelTZtBpPRre5tGvSQb4LyIE/
