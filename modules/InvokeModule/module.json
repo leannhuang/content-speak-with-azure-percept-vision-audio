@@ -2,7 +2,7 @@
   "$schema-version": "0.0.1",
   "description": "",
   "image": {
-    "repository": "<Your container registry login server/respository name>",
+    "repository": "<Your container registry login server>/invokemodule",
     "tag": {
       "version": "0.0.0",
       "platforms": {
