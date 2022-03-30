@@ -5,6 +5,9 @@ The goal of this project is to be able to use Azure Percept Audio to speak the c
 ![software-arch](docs/images/arch.png)
 
 ## Prerequsite
+- Percept DK ([Purchase](https://www.microsoft.com/en-us/store/build/azure-percept/8v2qxmzbz9vc))
+- Azure Subscription : [Free trial account](https://azure.microsoft.com/en-us/free/)
+- Install [Docker](https://docs.docker.com/get-docker/) for image building
 - Install [VS Code](https://code.visualstudio.com/)
 - Install [Git](https://git-scm.com/)
 - Install the [IoT Hub Extension](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-toolkit) in VS Code
@@ -29,8 +32,7 @@ The goal of this project is to be able to use Azure Percept Audio to speak the c
 
 ### Step 1: Create a Azure Container Registry
 
-1. Create a [Azure Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal#create-a-container-registry)
-2. [Enable admin account](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-prepare-registry#enable-admin-account) and note down `Username`, `Login server` and `password`
+1. Create a [Azure Container Registry](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry)and note down `Username`, `Login server` and `password`
 
 ### Step 2: Provide values for all variables in .env
 
