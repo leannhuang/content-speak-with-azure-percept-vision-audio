@@ -2,7 +2,7 @@
 The goal of this project is to be able to use Azure Percept Audio to speak the content that Azure Percept Vision sees.
 
 ## Solution Architecture
-
+![software-arch](docs/images/arch.png)
 
 ## Prerequsite
 - Install [VS Code](https://code.visualstudio.com/)
@@ -62,6 +62,7 @@ The goal of this project is to be able to use Azure Percept Audio to speak the c
             ```
    2. Build and Push
       1. Select your target architecture. Open the command palette and search for `Azure IoT Edge: Set Default Target Platform for Edge Solution`. In the promoted window, select `arm64v8`.
+        
         ![select-arch](docs/images/select-architecture.png)
         
       2. In the Visual Studio Code explorer, right-click the `deployment.EarSomSpeechModule.template.json` file and select `Build and Push IoT Edge Solution`.
@@ -73,7 +74,7 @@ The goal of this project is to be able to use Azure Percept Audio to speak the c
         
         ![create-deployment-for-single-device](docs/images/create-deployment-for-single-device.png) 
 
-   2. Under your device, expand Modules to see a list of deployed and running modules. Click the refresh button. You should see the new SimulatedTemperatureSensor and SampleModule modules running on your device.
+   2. Under your device, expand Modules to see a list of deployed and running modules. Click the refresh button. You should see the `$edgeAgent`, `$edgeHub`, `azureeyemodule`, `EarSomSpeechModule` and `$InvokeModule` modules running on your device.
         
         ![module](docs/images/module-list.png) 
     
