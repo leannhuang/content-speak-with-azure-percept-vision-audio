@@ -72,21 +72,20 @@ async def main():
                     print ( "" )
                     print ( "IoTHubDeviceMethod sample stopped" )
                 
-
             
-            print(f'label: {label}')
-            print(f'Date: {now}')
+                print(f'label: {label}')
+                print(f'Date: {now}')
 
-            json_data = {
-                    'Date': f'{now}', 
-                    'label': f'{label}'
-                }
+                json_data = {
+                        'Date': f'{now}', 
+                        'label': f'{label}'
+                    }
             
-            print("forwarding mesage to output1")
-            msg = Message(json.dumps(json_data))
-            msg.content_encoding = "utf-8"
-            msg.content_type = "application/json"
-            await module_client.send_message_to_output(msg, "output1")
+                print("forwarding mesage to output1")
+                msg = Message(json.dumps(json_data))
+                msg.content_encoding = "utf-8"
+                msg.content_type = "application/json"
+                await module_client.send_message_to_output(msg, "output1")
 
         else:
             print("message received on unknown input")

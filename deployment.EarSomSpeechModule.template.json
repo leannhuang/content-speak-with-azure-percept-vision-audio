@@ -18,7 +18,7 @@
               "yourregistryname": {
                 "username": "$CONTAINER_REGISTRY_USERNAME_yourregistryname",
                 "password": "$CONTAINER_REGISTRY_PASSWORD_yourregistryname",
-                "address": "$CONTAINER_REGISTRY_LOGINSERVER_yourregistryname"
+                "address": "$CONTAINER_REGISTRY_USERNAME_yourregistryname.azurecr.io"
               }
             }
           }
