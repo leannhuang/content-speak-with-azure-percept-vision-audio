@@ -34,8 +34,9 @@ The goal of this project is to be able to use Azure Percept Audio to speak the c
 ### Step 2: Provide values for all variables in .env
 
 1. Rename `envtemplate` to `.env`
+    
     ![rename](docs/images/rename-env.png)
-2. Open the file and fill in the following details
+2. Open the file and fill in the following details  
     ![env-content](docs/images/env-content.png)
    1. CONTAINER_REGISTRY_USERNAME_yourregistryname
    2. CONTAINER_REGISTRY_PASSWORD_yourregistryname
@@ -57,8 +58,10 @@ Use VSCode as in [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial
 3. Deploy edge modules to device
    1. In the Visual Studio Code explorer, under the `Azure IoT Hub` section, expand `Devices` to see your list of IoT devices.
    2. Select your target architecture. Open the command palette and search for `Azure IoT Edge: Set Default Target Platform for Edge Solution`. In the promoted window, select `arm64v8`.
+        
         ![select-arch](docs/images/select-architecture.png) 
    3. Right-click the IoT Edge device that you want to deploy to, then select `Create Deployment for Single Device`.
+        
         ![create-deployment](docs/images/create-deployment.png) 
    4. Under your device, expand Modules to see a list of deployed and running modules. Click the refresh button. You should see the new SimulatedTemperatureSensor and SampleModule modules running on your device.
     
