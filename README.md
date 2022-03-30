@@ -32,7 +32,7 @@ The goal of this project is to be able to use Azure Percept Audio to speak the c
 
 ### Step 1: Create a Azure Container Registry
 
-1. Create a [Azure Container Registry](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry)and note down `Username`, `Login server` and `password`
+1. Create a [Azure Container Registry](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry) and note down `Username`, `Login server` and `password`
 
 ### Step 2: Provide values for all variables in .env
 
