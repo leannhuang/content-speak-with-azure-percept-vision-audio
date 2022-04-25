@@ -94,6 +94,7 @@ The goal of this solution is to use Azure Percept Audio to speak the content tha
   3. Click EarSoMSpeechModule
         ![earmodule](docs/images/earmodule.png) 
   4. Click Module Identity Twin
+        
         ![module_twin](docs/images/module_twin.png) 
   5. Replace the `key` and `region` you note down in step 4 and add it under `desired` of `properties`
         ```
