@@ -32,7 +32,7 @@ The goal of this project is to be able to use Azure Percept Audio to speak the c
 
 ### Step 1: Create a Azure Container Registry
 
-1. Create a [Azure Container Registry](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry)and note down `Username`, `Login server` and `password`
+1. Create a [Azure Container Registry](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry) and note down `Username`, `Login server` and `password`
 
 ### Step 2: Provide values for all variables in .env
 
@@ -82,7 +82,37 @@ The goal of this project is to be able to use Azure Percept Audio to speak the c
     
     It may take a few minutes for the modules to start. The IoT Edge runtime needs to receive its new deployment manifest, pull down the module images from the container runtime, then start each new module.
 
-### Step 4: Grant the speech module permission to access Ear SoM
+
+### Step 4: Create the Azure Speech resources
+  1. [Create the Azure resources](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/overview#create-the-azure-resource) 
+  2. [Note down the key and region for further use](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/overview#find-keys-and-locationregion)
+
+### Step 5: Update the module twin of the EarSomSpeechModule
+  1. Go to Azure IoT Hub
+  2. Click Device ID
+        ![device_id](docs/images/device_id.png) 
+  3. Click EarSoMSpeechModule
+        ![earmodule](docs/images/earmodule.png) 
+  4. Click Module Identity Twin
+        ![module_twin](docs/images/module_twin.png) 
+  5. Replace the `key` and `region` you note down in step 4 and add it under `desired` of `properties`
+        ```
+        "speech": {
+                "@apiVersion": "1.0",
+                "type": "synthesize",
+                "config": {
+                    "key": "1dbaf8c500edXXXXXXXXXXXXXXXXX",
+                    "region": "westus"
+                }
+            },
+        ```
+        ![module_twin_content](docs/images/module_twin_content.png) 
+  6. Click Save
+   
+        ![save](docs/images/save.png)
+
+
+### Step 6: Grant the speech module permission to access Ear SoM
 
   1. Open terminal and SSH to your device 
    
@@ -115,8 +145,11 @@ The goal of this project is to be able to use Azure Percept Audio to speak the c
         sudo udevadm trigger
         ```
   4. Remove and plug Ear SoM.
+  5. Restart EarSoMSpeech Module
+        ![restart_earmodule](docs/images/restart_earmodule.png)  
 
-### Step 5: Create or replace your object detection model and deploy it to DK [here](https://docs.microsoft.com/en-us/azure/azure-percept/tutorial-nocode-vision) (the default model is people detection model)  
+
+### Step 8: Create or replace your object detection model and deploy it to DK [here](https://docs.microsoft.com/en-us/azure/azure-percept/tutorial-nocode-vision) (the default model is people detection model)  
 
 
 Now you are ready to use Azure Percept Audio to speak the content that Azure Percept Vision sees. 
@@ -130,7 +163,8 @@ Now you are ready to use Azure Percept Audio to speak the content that Azure Per
 
     ![EarSoM](docs/images/EarSoM-log.png) 
 
-3. Remove and plug Ear SoM again if you can not hear the sound from Percept Audio
+3. Remove and plug Ear SoM again to make sure it's well connected if you can not hear the sound from Percept Audio
+    ![unplug_and_plug](docs/images/unplug_and_plug.png) 
 
 ### Credits and references
 - [Tutorial: Develop IoT Edge modules with Linux containers](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11)
