@@ -90,6 +90,7 @@ The goal of this solution is to use Azure Percept Audio to speak the content tha
 ### Step 5: Update the module twin of the EarSomSpeechModule
   1. Go to Azure IoT Hub
   2. Click Device ID
+        
         ![device_id](docs/images/device_id.png) 
   3. Click EarSoMSpeechModule
         ![earmodule](docs/images/earmodule.png) 
@@ -147,6 +148,7 @@ The goal of this solution is to use Azure Percept Audio to speak the content tha
         ```
   4. Remove and plug Ear SoM.
   5. Restart EarSoMSpeech Module
+        
         ![restart_earmodule](docs/images/restart_earmodule.png)  
 
 
@@ -165,6 +167,7 @@ Now you are ready to use Azure Percept Audio to speak the content that Azure Per
     ![EarSoM](docs/images/EarSoM-log.png) 
 
 3. Remove and plug Ear SoM again to make sure it's well connected if you can not hear the sound from Percept Audio
+    
     ![unplug_and_plug](docs/images/unplug_and_plug.png) 
 
 ### Credits and references
