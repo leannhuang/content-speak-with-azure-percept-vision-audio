@@ -1,5 +1,5 @@
 # content-speak-with-azure-percept-vision-audio
-The goal of this project is to be able to use Azure Percept Audio to speak the content that Azure Percept Vision sees.
+The goal of this solution is to use Azure Percept Audio to speak the content that Azure Percept Vision sees.
 
 ## Solution Architecture
 ![software-arch](docs/images/arch.png)
